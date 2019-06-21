@@ -20,8 +20,8 @@ TaskManager taskManager0;
 
 bool WIFI_INCLUDED = true;
 
-// HardwareSerial &mpuCom = Serial1;
-HardwareSerial &mpuCom = Serial;
+HardwareSerial &mpuCom = Serial1;
+//HardwareSerial &mpuCom = Serial;
 
 
 #include "./modules/Helper/DisplayLog.h"

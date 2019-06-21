@@ -10,7 +10,7 @@ WiFiServer server(80);
 
 extern TaskManager taskManager;
 class VmnServer : public Task
-{
+{   
   public:
     static VmnServer *s_instance;
     VmnServer() : Task(MsToTaskTime(10))
@@ -20,7 +20,7 @@ class VmnServer : public Task
         //mpuCom.println("Configuring access point...");
 
         // You can remove the password parameter if you want the AP to be open.
-        WiFi.softAP(ssid, password);
+        WiFi.softAP(ssid, password, 1, 0, 8);
         // WiFi.softAP(ssid);
         
         IPAddress myIP = WiFi.softAPIP();
